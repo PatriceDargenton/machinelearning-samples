@@ -3,6 +3,7 @@ Imports Microsoft.ML
 Imports Microsoft.ML.DataOperationsCatalog
 Imports TFFEImageClassification.Train.TFFEImageClassification.DataModels
 Imports TFFEImageClassification.Train.Common
+Imports System.IO
 
 Namespace TFFEImageClassification.Model
 
@@ -141,6 +142,8 @@ Namespace TFFEImageClassification.Model
             ConsoleWriteHeader("Save model to local file")
             ModelHelpers.DeleteAssets(outputMlNetModelFilePath)
 
+            Dim parentDir = IO.Path.GetDirectoryName(outputMlNetModelFilePath)
+            If Not Directory.Exists(parentDir) Then Directory.CreateDirectory(parentDir)
             mlContext.Model.Save(model, predictionsDataView.Schema, outputMlNetModelFilePath)
             Console.WriteLine($"Model saved: {outputMlNetModelFilePath}")
 

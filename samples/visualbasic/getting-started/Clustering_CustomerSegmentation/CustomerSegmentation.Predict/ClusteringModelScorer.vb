@@ -8,6 +8,7 @@ Imports Microsoft.ML.Data
 Imports CustomerSegmentation.Train.CustomerSegmentation.DataStructures
 'Imports CustomerSegmentation.Common
 Imports CustomerSegmentation.Predict.Common
+Imports System.IO
 
 Namespace CustomerSegmentation.Model
 
@@ -62,6 +63,8 @@ Namespace CustomerSegmentation.Model
                 predictions As IEnumerable(Of ClusteringPrediction), csvlocation As String)
 
             ConsoleHelper.ConsoleWriteHeader("CSV Customer Segmentation")
+            Dim parentDir = IO.Path.GetDirectoryName(csvlocation)
+            If Not Directory.Exists(parentDir) Then Directory.CreateDirectory(parentDir)
             Using w = New System.IO.StreamWriter(csvlocation)
                 w.WriteLine($"LastName,SelectedClusterId")
                 w.Flush()

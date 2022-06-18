@@ -277,6 +277,8 @@ Namespace WebRanking
             Console.WriteLine("===== Save the model =====" & vbLf)
 
             ' Save the model
+            Dim parentDir = IO.Path.GetDirectoryName(modelPath)
+            If Not Directory.Exists(parentDir) Then Directory.CreateDirectory(parentDir)
             mlContext.Model.Save(model, Nothing, modelPath)
 
             Console.WriteLine("===== Consume the model =====" & vbLf)
