@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "BCCreditCardFraudDetection.Common", "CreditCardFraudDetection.Common\BCCreditCardFraudDetection.Common.vbproj", "{96F6732C-EDEA-4AFE-9C3C-596A98BF4883}"
+EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "BCCreditCardFraudDetection.Trainer", "CreditCardFraudDetection.Trainer\BCCreditCardFraudDetection.Trainer.vbproj", "{5F891D59-C279-4FB6-AE46-C33F60D7CA34}"
+EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "BCCreditCardFraudDetection.Predictor", "CreditCardFraudDetection.Predictor\BCCreditCardFraudDetection.Predictor.vbproj", "{114EEF23-97B2-415E-A3E6-56DC9138CED3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96F6732C-EDEA-4AFE-9C3C-596A98BF4883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F6732C-EDEA-4AFE-9C3C-596A98BF4883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F6732C-EDEA-4AFE-9C3C-596A98BF4883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F6732C-EDEA-4AFE-9C3C-596A98BF4883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{114EEF23-97B2-415E-A3E6-56DC9138CED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{114EEF23-97B2-415E-A3E6-56DC9138CED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{114EEF23-97B2-415E-A3E6-56DC9138CED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{114EEF23-97B2-415E-A3E6-56DC9138CED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F891D59-C279-4FB6-AE46-C33F60D7CA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F891D59-C279-4FB6-AE46-C33F60D7CA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F891D59-C279-4FB6-AE46-C33F60D7CA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F891D59-C279-4FB6-AE46-C33F60D7CA34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FB989C2-2680-4AEC-8415-B967BD02C1D7}
+	EndGlobalSection
+EndGlobal

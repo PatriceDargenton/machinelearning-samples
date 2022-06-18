@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>UnitTestMain</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <AssemblyName>UnitTestMain</AssemblyName>
+
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn />
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn />
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\getting-started\AdvancedExperiment_AutoML\AdvancedTaxiFarePrediction\AdvancedTaxiFarePrediction.vbproj" />
+    <ProjectReference Include="..\getting-started\AnomalyDetection_CreditCardFraudDetection\CreditCardFraudDetection.Predictor\CreditCardFraudDetection.Predictor.vbproj" />
+    <ProjectReference Include="..\getting-started\AnomalyDetection_CreditCardFraudDetection\CreditCardFraudDetection.Trainer\CreditCardFraudDetection.Trainer.vbproj" />
+    <ProjectReference Include="..\getting-started\AnomalyDetection_PowerMeterReadings\PowerAnomalyDetection\PowerAnomalyDetection.vbproj" />
+    <ProjectReference Include="..\getting-started\AnomalyDetection_Sales\SpikeDetection\SpikeDetectionConsoleApp\SpikeDetection.vbproj" />
+    <ProjectReference Include="..\getting-started\BinaryClassification_AutoML\SentimentAnalysis\SentimentAnalysis.vbproj" />
+    <ProjectReference Include="..\getting-started\BinaryClassification_CreditCardFraudDetection\CreditCardFraudDetection.Predictor\BCCreditCardFraudDetection.Predictor.vbproj" />
+    <ProjectReference Include="..\getting-started\BinaryClassification_CreditCardFraudDetection\CreditCardFraudDetection.Trainer\BCCreditCardFraudDetection.Trainer.vbproj" />
+    <ProjectReference Include="..\getting-started\BinaryClassification_HeartDiseaseDetection\HeartDiseaseDetection\HeartDiseaseDetection\HeartDiseaseDetection.vbproj" />
+    <ProjectReference Include="..\getting-started\BinaryClassification_SentimentAnalysis\SentimentAnalysis\SentimentAnalysisConsoleApp\SentimentAnalysisConsoleApp.vbproj" />
+    <ProjectReference Include="..\getting-started\BinaryClassification_SpamDetection\SpamDetectionConsoleApp\SpamDetectionConsoleApp.vbproj" />
+    <ProjectReference Include="..\getting-started\Clustering_CustomerSegmentation\CustomerSegmentation.Predict\CustomerSegmentation.Predict.vbproj" />
+    <ProjectReference Include="..\getting-started\Clustering_CustomerSegmentation\CustomerSegmentation.Train\CustomerSegmentation.Train.vbproj" />
+    <ProjectReference Include="..\getting-started\Clustering_Iris\IrisClustering\IrisClusteringConsoleApp\Clustering_Iris.vbproj" />
+    <ProjectReference Include="..\getting-started\DatabaseIntegration\DatabaseIntegration\DatabaseIntegration.vbproj" />
+    <ProjectReference Include="..\getting-started\DatabaseLoader\DatabaseLoaderConsoleApp\DatabaseLoaderConsoleApp.vbproj" />
+    <ProjectReference Include="..\getting-started\DeepLearning_ImageClassification_TensorFlow\ImageClassification\ImageClassification.Score.vbproj" />
+    <ProjectReference Include="..\getting-started\DeepLearning_ImageClassification_Training\ImageClassification.Predict\ImageClassification.Predict.vbproj" />
+    <ProjectReference Include="..\getting-started\DeepLearning_ImageClassification_Training\ImageClassification.Train\ImageClassification.Train.vbproj" />
+    <ProjectReference Include="..\getting-started\DeepLearning_ObjectDetection_Onnx\ObjectDetectionConsoleApp\ObjectDetection.vbproj" />
+    <ProjectReference Include="..\getting-started\DeepLearning_TensorFlowEstimator\ImageClassification.Predict\TFFEImageClassification.Predict.vbproj" />
+    <ProjectReference Include="..\getting-started\DeepLearning_TensorFlowEstimator\ImageClassification.Train\TFFEImageClassification.Train.vbproj" />
+    <ProjectReference Include="..\getting-started\LargeDatasets\LargeDatasets\LargeDatasets.vbproj" />
+    <ProjectReference Include="..\getting-started\MatrixFactorization_MovieRecommendation\MovieRecommendation\MovieRecommendation.vbproj" />
+    <ProjectReference Include="..\getting-started\MatrixFactorization_ProductRecommendation\ProductRecommender\ProductRecommender.vbproj" />
+    <ProjectReference Include="..\getting-started\MulticlassClassification_AutoML\MNIST\MNIST.vbproj" />
+    <ProjectReference Include="..\getting-started\MulticlassClassification_Iris\IrisClassification\IrisClassificationConsoleApp\MulticlassClassification_Iris.vbproj" />
+    <ProjectReference Include="..\getting-started\MulticlassClassification_mnist\mnist\mnist2.vbproj" />
+    <ProjectReference Include="..\getting-started\Ranking_Web\WebRanking\WebRanking.vbproj" />
+    <ProjectReference Include="..\getting-started\Regression_AutoML\TaxiFarePrediction\TaxiFarePrediction2.vbproj" />
+    <ProjectReference Include="..\getting-started\Regression_BikeSharingDemand\BikeSharingDemand\BikeSharingDemandConsoleApp\BikeSharingDemand.vbproj" />
+    <ProjectReference Include="..\getting-started\Regression_TaxiFarePrediction\TaxiFarePrediction\TaxiFarePredictionConsoleApp\TaxiFarePrediction.vbproj" />
+    <ProjectReference Include="..\getting-started\XOR\XOR\XORConsoleApp\XOR.vbproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SqlLocalDb\Criteo-100k-rows.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SqlLocalDb\Criteo-100k-rows_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

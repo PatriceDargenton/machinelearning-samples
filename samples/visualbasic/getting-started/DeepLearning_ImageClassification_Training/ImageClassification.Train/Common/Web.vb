@@ -1,0 +1,1 @@
+﻿' See samples\visualbasic\common\Web.vb
