@@ -530,6 +530,26 @@ MSLRWeb10K*Rows.tsv
 /samples/csharp/end-to-end-apps/Recommendation-MovieRecommender/MovieRecommender_Model/Model/model.zip
 /samples/csharp/end-to-end-apps/Recommendation-MovieRecommender/MovieRecommender/movierecommender/Models/model.zip
 
+/samples/visualbasic/Data/hour_*.csv
+/samples/visualbasic/getting-started/BinaryClassification_AutoML/SentimentAnalysis/Data/wikipedia-detox-250-line-*.tsv
+/samples/visualbasic/getting-started/DeepLearning_ImageClassification_TensorFlow/ImageClassification/assets/inputs/inception/imagenet.?sv
+/samples/visualbasic/getting-started/DeepLearning_ImageClassification_Training/ImageClassification.Predict/assets/inputs/images-for-predictions/FlowersForPredictions/*.png
+/samples/visualbasic/getting-started/DeepLearning_ImageClassification_Training/ImageClassification.Predict/assets/inputs/images-for-predictions/*.png
+/samples/visualbasic/getting-started/DeepLearning_ImageClassification_Training/ImageClassification.Train/assets/inputs/images-for-predictions/FlowersForPredictions/*.png
+/samples/visualbasic/getting-started/DeepLearning_TensorFlowEstimator/ImageClassification.Predict/assets/inputs/images-for-predictions/*.png
+/samples/visualbasic/getting-started/DeepLearning_TensorFlowEstimator/ImageClassification.Train/assets/inputs/tensorflow-pretrained-models/inception-v1/imagenet.?sv
+/samples/visualbasic/getting-started/MulticlassClassification_AutoML/MNIST/Data/optdigits-*.csv
+/samples/visualbasic/getting-started/MulticlassClassification_mnist/mnist/Data/optdigits-*.csv
+/samples/visualbasic/getting-started/Regression_BikeSharingDemand/BikeSharingDemand/Data/hour_*.csv
+/samples/visualbasic/getting-started-unit-tests/assets/inputs/images-for-predictions/FlowersForPredictions/*.png
+/samples/visualbasic/getting-started-unit-tests/assets/inputs/images-for-predictions/*.png
+/samples/visualbasic/getting-started-unit-tests/assets/inputs/inception/imagenet.?sv
+/samples/visualbasic/getting-started-unit-tests/assets/inputs/tensorflow-pretrained-models/inception-v1/imagenet.?sv
+/samples/visualbasic/getting-started-unit-tests/Data/optdigits-*.csv
+/samples/visualbasic/getting-started-unit-tests/Data/wikipedia-detox-250-line-*.tsv
+/samples/visualbasic/getting-started-unit-tests2/assets/inputs/images-for-predictions/FlowersForPredictions/*.png
+/samples/visualbasic/getting-started-unit-tests2/assets/inputs/images-for-predictions/*.png
+
 /samples/modelbuilder/ImageClassification_Azure_LandUse/LandUsePhotosSet.zip
 /samples/modelbuilder/ImageClassification_Azure_LandUse/LandUse/LandUse.onnx
 /samples/modelbuilder/ImageClassification_Azure_LandUse/LandUse/LandUse.zip
