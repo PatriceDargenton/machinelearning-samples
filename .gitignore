@@ -533,14 +533,18 @@ MSLRWeb10K*Rows.tsv
 /samples/visualbasic/getting-started/AdvancedExperiment_AutoML/AdvancedTaxiFarePrediction/Data/taxi-fare-*.csv
 /samples/visualbasic/getting-started/AdvancedExperiment_AutoML/AdvancedTaxiFarePrediction/Data/taxi-fare.zip
 /samples/visualbasic/getting-started/AdvancedExperiment_AutoML/AdvancedTaxiFarePrediction/MLModels/*.zip
+/samples/visualbasic/getting-started/AnomalyDetection_PowerMeterReadings/PowerAnomalyDetection/MLModels/PowerAnomalyDetectionModel.zip
 /samples/visualbasic/getting-started/AnomalyDetection_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/*.zip
 /samples/visualbasic/getting-started/AnomalyDetection_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/*.csv
 /samples/visualbasic/getting-started/AnomalyDetection_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/output/randomizedPca.zip
+/samples/visualbasic/getting-started/AnomalyDetection_CreditCardFraudDetection/CreditCardFraudDetection.Predictor/assets/input/*.zip
+/samples/visualbasic/getting-started/AnomalyDetection_CreditCardFraudDetection/CreditCardFraudDetection.Predictor/assets/input/*.csv
 /samples/visualbasic/getting-started/AnomalyDetection_PowerMeterReadings/PowerAnomalyDetection/PowerAnomalyDetectionModel.zip
 /samples/visualbasic/getting-started/BinaryClassification_AutoML/SentimentAnalysis/Data/wikipedia-detox-250-line-*.tsv
 /samples/visualbasic/getting-started/BinaryClassification_AutoML/SentimentAnalysis/MLModels/SentimentModel.zip
 /samples/visualbasic/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/*.zip
 /samples/visualbasic/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/output/fastTree.zip
+/samples/visualbasic/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Predictor/assets/input/*.zip
 /samples/visualbasic/getting-started/BinaryClassification_HeartDiseaseDetection/HeartDiseaseDetection/MLModels/HeartClassification.zip
 /samples/visualbasic/getting-started/BinaryClassification_SentimentAnalysis/SentimentAnalysis/Data/SentimentModel.zip
 /samples/visualbasic/getting-started/BinaryClassification_SentimentAnalysis/SentimentAnalysis/Data/wikiDetoxAnnotated40kRows.tsv
@@ -549,6 +553,7 @@ MSLRWeb10K*Rows.tsv
 /samples/visualbasic/getting-started/BinaryClassification_SpamDetection/SpamDetectionConsoleApp/Data/spamfolder/SMSSpamCollection
 /samples/visualbasic/getting-started/Clustering_CustomerSegmentation/CustomerSegmentation.Train/assets/outputs/retailClustering.zip
 /samples/visualbasic/getting-started/Clustering_CustomerSegmentation/CustomerSegmentation.Predict/assets/outputs/customerSegmentation.*
+/samples/visualbasic/getting-started/Clustering_Iris/IrisClustering/MLModels/IrisModel.zip
 /samples/visualbasic/getting-started/DatabaseLoader/DatabaseLoaderConsoleApp/SqlLocalDb/Criteo-100k-rows*.*
 /samples/visualbasic/getting-started/DatabaseLoader/DatabaseLoaderConsoleApp/SqlLocalDb/DatabaseLoaderSqlLocalDb.zip
 /samples/visualbasic/getting-started/DeepLearning_ImageClassification_TensorFlow/ImageClassification/assets/inputs/inception/imagenet.?sv
@@ -584,7 +589,7 @@ MSLRWeb10K*Rows.tsv
 /samples/visualbasic/getting-started/MatrixFactorization_ProductRecommendation/ProductRecommender/Data/Amazon0302.zip
 /samples/visualbasic/getting-started/MulticlassClassification_AutoML/MNIST/Data/optdigits-*.csv
 /samples/visualbasic/getting-started/MulticlassClassification_mnist/mnist/Data/optdigits-*.csv
-/samples/visualbasic/getting-started/MulticlassClassification_Iris/IrisClassification/IrisClassificationModel.zip
+/samples/visualbasic/getting-started/MulticlassClassification_Iris/IrisClassification/MLModels/IrisClassificationModel.zip
 /samples/visualbasic/getting-started/MulticlassClassification_mnist/mnist/MLModels/Model.zip
 /samples/visualbasic/getting-started/MulticlassClassification_AutoML/MNIST/MLModels/Model.zip
 /samples/visualbasic/getting-started/Ranking_Web/WebRanking/Assets/Input/WebRanking.zip
@@ -598,6 +603,7 @@ MSLRWeb10K*Rows.tsv
 /samples/visualbasic/getting-started/Regression_TaxiFarePrediction/TaxiFarePrediction/Data/taxi-fare.zip
 /samples/visualbasic/getting-started/Regression_TaxiFarePrediction/TaxiFarePrediction/MLModels/TaxiFareModel.zip
 /samples/visualbasic/getting-started/XOR/XOR/*.zip
+/samples/visualbasic/getting-started/XOR/XOR/MLModels/XORModel*.zip
 /samples/visualbasic/Data/hour_*.csv
 /samples/visualbasic/getting-started-unit-tests/assets/inputs/images-for-predictions/FlowersForPredictions/*.png
 /samples/visualbasic/getting-started-unit-tests/assets/inputs/images-for-predictions/*.png

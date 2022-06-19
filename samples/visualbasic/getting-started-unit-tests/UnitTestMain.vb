@@ -270,13 +270,13 @@ Namespace MLSamples
         End Sub
 
         <TestMethod>
-        Sub Test18Iris()
+        Sub Test18IrisMulticlassClassification()
 
             Dim myDataPath$ = "..\..\..\..\getting-started\" &
                 "MulticlassClassification_Iris\IrisClassification\Data"
             Dim myDataFullPath$ = Path.GetFullPath(myDataPath)
             Dim myModelePath$ = "..\..\..\..\getting-started\" &
-                "MulticlassClassification_Iris\IrisClassification"
+                "MulticlassClassification_Iris\IrisClassification\MLModels"
             Dim myModeleFullPath$ = Path.GetFullPath(myModelePath)
             Dim res = MulticlassClassification_Iris.MulticlassClassification_Iris.
                 Program.GetResult(myDataFullPath, myModeleFullPath, isTest:=True)
