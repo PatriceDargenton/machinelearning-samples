@@ -94,11 +94,15 @@ namespace eShopDashboard
 
             var pathBase = Configuration["PATH_BASE"];
 
-            app.UseSwagger()
-              .UseSwaggerUI(c =>
-              {
-                  c.SwaggerEndpoint($"{ (!string.IsNullOrEmpty(pathBase) ? pathBase : string.Empty) }/swagger/v1/swagger.json", "eShopDashboard.API V1");
-              });
+            app.UseSwagger();
+            if (env.IsDevelopment())
+            {
+                app.UseSwaggerUI(c => // UseSwaggerUI is called only in Development.
+                {
+                    c.SwaggerEndpoint($"{ (!string.IsNullOrEmpty(pathBase) ? pathBase : string.Empty) }/swagger/v1/swagger.json", "eShopDashboard.API V1");
+                });
+            }
+
         }
     }
 }
