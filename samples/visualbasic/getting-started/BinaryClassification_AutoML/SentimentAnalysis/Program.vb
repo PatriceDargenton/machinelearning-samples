@@ -10,9 +10,9 @@ Namespace SentimentAnalysisAutoML
 
     Public Module Program
 
-        Private ExperimentTime As UInteger = 60
+        Private Const ExperimentTime As UInteger = 60
 
-        Public Sub Main(args() As String)
+        Public Sub Main()
 
             Dim assetsRelativePath As String = "../../../Data"
             Dim assetsPath As String = GetAbsolutePath(assetsRelativePath)
@@ -28,8 +28,7 @@ Namespace SentimentAnalysisAutoML
         End Sub
 
         Public Function GetResult(
-                myAssetsPath As String, myModelPath As String,
-                Optional isTest As Boolean = False) As Boolean
+                myAssetsPath As String, myModelPath As String) As Boolean
 
             Dim mlContext As New MLContext() ' seed:=1
             Dim modelPath As String = Path.GetFullPath(Path.Combine(myModelPath,

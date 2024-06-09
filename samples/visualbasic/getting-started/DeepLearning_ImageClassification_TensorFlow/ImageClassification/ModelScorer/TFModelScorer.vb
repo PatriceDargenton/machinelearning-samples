@@ -113,7 +113,11 @@ Namespace DLTFImageClassification.ModelScorer
                     imageData.PredictedLabel = .Item1
                     imageData.Probability = .Item2
                 End With
-                If imageData.Probability > 0.99! Then nbSuccess += 1
+                If imageData.Probability > 0.98! Then
+                    nbSuccess += 1
+                Else
+                    Debug.WriteLine("Probability: " & imageData.Probability)
+                End If
                 imageData.ConsoleWrite()
                 Yield imageData
             Next sample

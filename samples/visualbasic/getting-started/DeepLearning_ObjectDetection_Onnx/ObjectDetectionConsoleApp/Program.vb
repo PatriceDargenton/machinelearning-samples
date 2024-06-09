@@ -44,7 +44,8 @@ Namespace ObjectDetection
 
         Public Shared Function GetResult(
                 myAssetsPath As String, myCommonDatasetsPath As String,
-                myCommonGraphsPath As String) As Boolean
+                myCommonGraphsPath As String,
+                Optional isTest As Boolean = False) As Boolean
 
             Dim modelFilePath = Path.Combine(myAssetsPath, "Model", yoloGraphOnnx)
             Dim imagesFolder = Path.Combine(myAssetsPath, "images")
@@ -91,7 +92,7 @@ Namespace ObjectDetection
                 Dim imageFileName As String = images.ElementAt(i).Label
                 Dim detectedObjects As IList(Of YoloBoundingBox) = boundingBoxes.ElementAt(i)
 
-                DrawBoundingBox(imagesFolder, outputFolder, imageFileName, detectedObjects)
+                If Not isTest Then DrawBoundingBox(imagesFolder, outputFolder, imageFileName, detectedObjects)
 
                 LogDetectedObjects(imageFileName, detectedObjects, nbSuccess)
             Next i

@@ -67,7 +67,7 @@ Retry:
                     XOR1.TestSomePredictions(mlContext, ModelPathZip)
 
                 Case "3"c
-                    XOR1AutoML.TrainFromFile(mlContext, ModelPathZip, TrainDataPathAutoML)
+                    XOR1AutoML.TrainFromFile(mlContext, ModelPathZip, TrainDataPathAutoML, isTest:=False)
                     XOR1AutoML.TestSomePredictions(mlContext, ModelPathZip)
 
                 Case "4"c
@@ -145,11 +145,12 @@ Retry:
 
         End Function
 
-        Public Function GetResult1XORAutoML(myAssetsPath As String, myModelPath As String) As Boolean
+        Public Function GetResult1XORAutoML(myAssetsPath As String, myModelPath As String,
+            Optional isTest As Boolean = False) As Boolean
 
             Dim ModelPathZip = myModelPath + ".zip"
             Dim mlContext As New MLContext()
-            XOR1AutoML.TrainFromFile(mlContext, ModelPathZip, myAssetsPath)
+            XOR1AutoML.TrainFromFile(mlContext, ModelPathZip, myAssetsPath, isTest)
             Dim scoreRounded = XOR1AutoML.TestSomePredictions(mlContext, ModelPathZip)
             Dim scoreExpected = 4
             Dim success = scoreRounded >= scoreExpected

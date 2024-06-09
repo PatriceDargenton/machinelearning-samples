@@ -56,7 +56,7 @@ Namespace XORApp
         End Function
 
         Public Sub TrainFromFile(mlContext As MLContext, ModelPath As String,
-                TrainDataPath As String)
+                TrainDataPath As String, isTest As Boolean)
 
             ' STEP 1: Common data loading configuration
             Dim trainingDataView = mlContext.Data.LoadFromTextFile(Of XORData)(
@@ -80,7 +80,7 @@ Namespace XORApp
                 TrainDataPath, LabelColumnName:="Output") '"#Label"); 
             ' Run an AutoML experiment on the dataset
             Dim experimentResult = RunAutoMLExperiment(mlContext,
-                columnInference, trainingDataView)
+                columnInference, trainingDataView, isTest)
 
             Dim directoryPath = Path.GetDirectoryName(ModelPath)
             If Not Directory.Exists(directoryPath) Then
@@ -94,7 +94,8 @@ Namespace XORApp
 
         Private Function RunAutoMLExperiment(mlContext As MLContext,
                 columnInference As ColumnInferenceResults,
-                TrainDataView As IDataView) As ExperimentResult(Of RegressionMetrics)
+                TrainDataView As IDataView,
+                isTest As Boolean) As ExperimentResult(Of RegressionMetrics)
 
             ' STEP 1: Display first few rows of the training data.
             ConsoleHelperAutoML.ShowDataViewInConsole(mlContext, TrainDataView)
@@ -129,8 +130,15 @@ Namespace XORApp
             ConsoleHelperAutoML.ConsoleWriteHeader("=============== Running AutoML experiment ===============")
             Console.WriteLine($"Running AutoML regression experiment...")
             Dim stopwatch = Diagnostics.Stopwatch.StartNew()
-            ' Cancel experiment after the user presses any key
-            CancelExperimentAfterAnyKeyPress(cts)
+
+            If isTest Then
+                ' Cancel experiment after 2 mn
+                CancelExperiment(cts)
+            Else
+                ' Cancel experiment after the user presses any key
+                CancelExperimentAfterAnyKeyPress(cts)
+            End If
+
             Dim experimentResult As ExperimentResult(Of RegressionMetrics) =
                 experiment.Execute(
                     TrainDataView, columnInformation, ' preFeaturizer
@@ -151,7 +159,7 @@ Namespace XORApp
                 cts As CancellationTokenSource) As RegressionExperimentSettings
 
             Dim experimentSettings = New RegressionExperimentSettings()
-            experimentSettings.MaxExperimentTimeInSeconds = 3600
+            experimentSettings.MaxExperimentTimeInSeconds = 120 '3600
             experimentSettings.CancellationToken = cts.Token
 
             ' Set the metric that AutoML will try to optimize over the course of the experiment
@@ -180,6 +188,14 @@ Namespace XORApp
                               Console.ReadKey()
                               cts.Cancel()
                           End Sub)
+        End Sub
+
+        Private Sub CancelExperiment(cts As CancellationTokenSource)
+            Task.Run(Sub()
+                         Thread.Sleep(60 * 1000) ' Wait 1 mn
+                         'Thread.Sleep(30 * 1000) ' Wait 30 sec.
+                         cts.Cancel()
+                     End Sub)
         End Sub
 
         ''' <summary>

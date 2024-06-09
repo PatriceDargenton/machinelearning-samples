@@ -9,7 +9,7 @@ Namespace MulticlassClassification_Iris
 
     Public Module Program
 
-        Public Sub Main(args() As String)
+        Public Sub Main()
 
             Dim assetsRelativePath As String = "../../../../Data"
             Dim assetsPath As String = GetAbsolutePath(assetsRelativePath)

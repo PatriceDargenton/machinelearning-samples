@@ -51,8 +51,7 @@ Namespace TFFEImageClassification.Train
 
         Public Shared Function GetResult(
                 myAssetsPath As String,
-                myCommonDatasetsPath As String, myCommonGraphsPath As String,
-                Optional isTest As Boolean = False) As Boolean
+                myCommonDatasetsPath As String, myCommonGraphsPath As String) As Boolean
 
             Dim inceptionGraphPath = Path.Combine(myAssetsPath,
                 "inputs", "tensorflow-pretrained-models", inceptionFile, inceptionGraphZip)

@@ -178,6 +178,10 @@ Namespace DatabaseLoaderConsoleApp
             Dim watch As Stopwatch = New Stopwatch
             watch.Start()
 
+            ' 09/06/2024 Bug: SqlException: A network-related or instance-specific error occurred while 
+            '  establishing a connection to SQL Server. The server was not found or was not accessible.
+            ' Verify that the instance name is correct and that SQL Server is configured to allow remote connections.
+            ' (provider: SQL Network Interfaces, error: 50 - Local Database Runtime error occurred.)
             Dim model = trainingPipeLine.Fit(trainTestData.TrainSet)
 
             watch.Stop()

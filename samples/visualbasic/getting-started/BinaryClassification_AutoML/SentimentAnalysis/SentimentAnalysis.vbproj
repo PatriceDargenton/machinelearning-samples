@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ML.AutoML" Version="$(MicrosoftMLPreviewVersion)" />
+    <PackageReference Include="Microsoft.ML.AutoML" Version="0.19.1" />
   </ItemGroup>
 
 </Project>

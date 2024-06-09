@@ -198,7 +198,7 @@ Namespace AdvancedTaxiFarePrediction
             Dim stopwatch = System.Diagnostics.Stopwatch.StartNew()
 
             If isTest Then
-                ' Cancel experiment
+                ' Cancel experiment after 30 sec.
                 CancelExperiment(cts)
             Else
                 ' Cancel experiment after the user presses any key
@@ -223,7 +223,7 @@ Namespace AdvancedTaxiFarePrediction
                 cts As CancellationTokenSource) As RegressionExperimentSettings
 
             Dim experimentSettings = New RegressionExperimentSettings
-            experimentSettings.MaxExperimentTimeInSeconds = 3600
+            experimentSettings.MaxExperimentTimeInSeconds = 30 '3600
             experimentSettings.CancellationToken = cts.Token
 
             ' Set the metric that AutoML will try to optimize over the course of the experiment
@@ -241,7 +241,7 @@ Namespace AdvancedTaxiFarePrediction
             ' Don't use LbfgsPoissonRegression and OnlineGradientDescent trainers during this experiment
             ' (These trainers sometimes underperform on this dataset.)
             experimentSettings.Trainers.Remove(RegressionTrainer.LbfgsPoissonRegression)
-            experimentSettings.Trainers.Remove(RegressionTrainer.OnlineGradientDescent)
+            'experimentSettings.Trainers.Remove(RegressionTrainer.OnlineGradientDescent)
 
             Return experimentSettings
 
@@ -324,6 +324,7 @@ Namespace AdvancedTaxiFarePrediction
 
         Private Sub CancelExperiment(cts As CancellationTokenSource)
             Task.Run(Sub()
+                         Thread.Sleep(30 * 1000) ' Wait 30 sec.
                          cts.Cancel()
                      End Sub)
         End Sub

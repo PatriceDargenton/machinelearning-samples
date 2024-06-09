@@ -122,6 +122,8 @@ Namespace ImageClassificationTrain
             ' System.EntryPointNotFoundException HResult=0x80131523
             ' Unable to find an entry point named 'TF_StringEncodedSize' in DLL 'tensorflow':
             ' Max compatible version for SciSharp.TensorFlow.Redist: 2.3.1 < 2.7.0
+            ' Download https://aka.ms/mlnet-resources/meta/resnet_v2_50_299.meta 
+            ' to C:\Users\[MyAccount]\AppData\Local\Temp\MLNET\resnet_v2_50_299.meta
             Dim trainedModel = pipeline.Fit(trainDataView)
 
             watch.Stop()

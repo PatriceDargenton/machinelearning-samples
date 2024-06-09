@@ -10,7 +10,7 @@ Namespace mnist2
 
     Public Class Program
 
-        Shared Sub Main(args() As String)
+        Shared Sub Main()
 
             Dim assetsRelativePath As String = "../../../Data"
             Dim assetsPath As String = GetAbsolutePath(assetsRelativePath)

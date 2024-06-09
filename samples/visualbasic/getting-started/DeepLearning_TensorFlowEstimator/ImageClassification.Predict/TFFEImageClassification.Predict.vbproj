@@ -27,7 +27,7 @@
     <PackageReference Include="Microsoft.ML" Version="$(MicrosoftMLVersion)" />
     <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="$(MicrosoftMLVersion)" />
     <PackageReference Include="Microsoft.ML.TensorFlow" Version="$(MicrosoftMLVersion)" />
-    <PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.7.0" />
+    <PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.16.0" />
   </ItemGroup>
 
   <ItemGroup>
